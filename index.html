@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK 7</title>
+    <style>
+        body{
+            background-color: rgb(235, 235, 235);
+        }
+        div{
+            padding-left: 30%;
+            
+            margin: 10%;
+            height: 500px;
+            
+            
+        }
+        label{
+            text-align: left;
+        }
+        
+        input{
+            text-align: left;
+            align-items: left;
+            align-content: left;
+           
+        }
+        .inp{
+            height: 20px;
+            padding-right: 5px;
+        }
+        .btn {
+        background: #e61414;
+        background-color: rgb(225, 12, 12);
+        border-color: black;
+        -webkit-border-radius: 10;
+        -moz-border-radius: 10;
+        border-radius: 25px;
+        font-family: Georgia;
+        color: #ffffff;
+        font-size: 23px;
+        padding: 3px 20px 3px 20px;
+        text-decoration: none;
+        align-items: center;
+        text-align: center;
+        margin-left: 100px;
+        
+        }
+
+        .btn:hover {
+        background-color:white ;
+        background: #d7d7d7;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+
+        }
+        h1{
+            align-items: center;
+            text-align: center;
+            color: darkblue;
+        }
+        .login{
+         text-align: right;   
+        }
+    </style>
+</head>
+<body>
+    <h1 >Registeration form</h1>
+    <div>
+        <label for="fname">First name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" ><p id="1"></p>
+        <br><br><br>
+        <label for="lname">Last name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" ><p id="2"></p>
+        <br><br><br>
+        <label for="email">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="email" ><p id="3"></p>
+        <br><br><br>
+        <label for="pw">Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="password" ><p id="4"></p>
+        <br><br><br>
+        <label for="rpw">Re-enter Password &nbsp;&nbsp;</label>
+        <input type="password" ><p id="5"></p>
+        <br><br><br>
+        
+        <label for="gender">Gender  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</label>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label><br>
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;<input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+        
+        <br><br>
+        <label for="age">age &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="number"><br><br><br><p id="6"></p>
+        <label for="ph">Phone number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="number"><p id="7"></p>
+        <br><br><br>
+        <label for="add" >Address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" id="add"  ><p id="8"></p>
+        <br><br><br>
+        
+        <label for="state">State &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" ><p id="9"></p>
+        <br><br><br>
+        <label for="country" >Country&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <select  id="country" >
+            <option value="sel">choose your country</option>
+            <option value="India">English</option>
+            <option value="USA">Hindi</option>
+            <option value="London">Marathi</option>
+        </select>
+        <br><br>
+        <label for="lang">Languages known</label>
+            <input type="checkbox"id="Eng">
+            <label for="Eng">English</label>
+            <input type="checkbox"id="Kan">
+            <label for="Kan">Kannada</label>
+            <input type="checkbox"id="Hin">
+            <label for="Hin">Hindi</label>
+            <input type="checkbox"id="tel">
+            <label for="tel">Telugu</label>
+            <br><br>
+
+            
+                <input type="checkbox"id="check">
+                <label for="check">Hereby I declare all the given details are true</label>
+           
+            <br><br>
+            <div id="login">
+                login to <a href="https://ethnus.com/">ethnus</a> website
+                <br><br>
+            </div>
+    
+
+        <button class="btn">
+            <b>Register</b>
+        </button>
+    
+        <input type="submit" value="Submit" onclick="validateForm()" />
+        <script>
+            function validateForm() {
+                var fname = document.querySelector('input[name="fname"]');
+            var lname = document.querySelector('input[name="lname"]');
+            var email = document.querySelector('input[name="email"]');
+            var pw = document.querySelector('input[name="pw"]');
+            var rpw = document.querySelector('input[name="rpw"]');
+            var age = document.querySelector('input[name="age"]');
+            var ph = document.querySelector('input[name="ph"]');
+            var add = document.querySelector('input[name="add"]');
+            var state = document.querySelector('input[name="state"]');
+            
+            if (fname.value.trim() === "") {
+                fname.style.border = "2px solid red";
+                document.getElementById("1").textContent = "POOR";
+                document.getElementById("1").style.color = "red";
+            } else {
+                fname.style.border = ""; // Reset border style
+                document.getElementById("1").textContent = ""; // Clear error message
+            }
+            
+            if (lname.value.trim() === "") {
+                lname.style.border = "2px solid red";
+                document.getElementById("2").textContent = "POOR";
+                document.getElementById("2").style.color = "red";
+            } else {
+                lname.style.border = "";
+                document.getElementById("2").textContent = "";
+            }
+            
+            if (email.value.trim() === "") {
+                email.style.border = "2px solid red";
+                document.getElementById("3").textContent = "POOR";
+                document.getElementById("3").style.color = "red";
+            } 
+            else {
+                email.style.border = "";
+                document.getElementById("3").textContent = "";
+            }
+                if (pw.value.trim() === "") {
+                name.style.border = "2px solid red";
+                document.getElementById("4").textContent ="POOR";
+                document.getElementById("4").style.color = "red";
+                }
+                if (rpw.value.trim() === "") {
+                name.style.border = "2px solid red";
+                document.getElementById("5").textContent ="POOR";
+                document.getElementById("5").style.color = "red";
+                }
+                if (age.value.trim() === "") {
+                name.style.border = "2px solid red";
+                document.getElementById("6").textContent ="POOR";
+                document.getElementById("6").style.color = "red";
+                }
+                if (ph.value.trim() === "") {
+                name.style.border = "2px solid red";
+                document.getElementById("7").textContent ="POOR";
+                document.getElementById("7").style.color = "red";
+                }
+                if (add.value.trim() === "") {
+                name.style.border = "2px solid red";
+                document.getElementById("8").textContent ="POOR";
+                document.getElementById("8").style.color = "red";
+                }
+                if (state.value.trim() === "") {
+                name.style.border = "2px solid red";
+                document.getElementById("9").textContent ="POOR";
+                document.getElementById("9").style.color = "red";
+                }
+                }
+          
+          </script>
+</body>
+</html>
